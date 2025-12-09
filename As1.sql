@@ -1,6 +1,3 @@
-CREATE DATABASE sales_department;
-
-USE sales_department;
 
 CREATE TABLE products (
     product_id INT PRIMARY KEY AUTO_INCREMENT,
