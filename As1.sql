@@ -1,6 +1,4 @@
--- ==========================
---  PRODUCTS
--- ==========================
+
 CREATE TABLE Product (
     product_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -8,18 +6,14 @@ CREATE TABLE Product (
     stock_quantity INT NOT NULL
 );
 
--- ==========================
---  EMPLOYEES
--- ==========================
+
 CREATE TABLE Employee (
     employee_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     role VARCHAR(50) NOT NULL
 );
 
--- ==========================
---  SALES
--- ==========================
+
 CREATE TABLE Sale (
     sale_id SERIAL PRIMARY KEY,
     product_id INT NOT NULL,
@@ -31,9 +25,7 @@ CREATE TABLE Sale (
     FOREIGN KEY (employee_id) REFERENCES Employee(employee_id)
 );
 
--- ==========================
---  MONTHLY REPORTS
--- ==========================
+
 CREATE TABLE Monthly_Report (
     report_id SERIAL PRIMARY KEY,
     report_month VARCHAR(20) NOT NULL,
@@ -41,9 +33,7 @@ CREATE TABLE Monthly_Report (
     conclusion VARCHAR(255) NOT NULL
 );
 
--- ==========================
---  REPORT SALES (Link Table)
--- ==========================
+
 CREATE TABLE Report_Sale (
     report_id INT NOT NULL,
     sale_id INT NOT NULL,
